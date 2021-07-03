@@ -1,0 +1,23 @@
+﻿@model List<MyShopping.Entities.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Ürünlerimiz</h1>
+    <table>
+        @foreach (var product in Model)
+        {
+        <tr>
+            <td>@product.ID</td>
+            <td>@product.Name</td>
+            <td>@product.Category</td>
+            <td>@product.Price</td>
+            <td>@product.Description</td>
+        </tr>
+        }
+        
+    </table>
+    
+</div>
